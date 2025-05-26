@@ -35,7 +35,13 @@ app.get('/', (req, res) => {
     res.send("API is running")
 })
 
+app.get('/valobasha', (req, res) => {
+    res.send("API valona")
+})
+
 app.listen(port, () => {
     // console.log(`Server is running on http://0.0.0.0:${port}`)
 })
+
+
 
