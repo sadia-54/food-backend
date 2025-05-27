@@ -1,7 +1,7 @@
-import express from "express";
-import paymentModel from "../models/paymentModel.js";
-import orderModel from "../models/orderModel.js";
-import { v4 as uuidv4 } from "uuid"; 
+const express = require("express");
+const paymentModel = require("../models/paymentModel.js");
+const orderModel = require("../models/orderModel.js");
+const { v4: uuidv4 } = require("uuid");
 
 const paymentRouter = express.Router();
 
@@ -65,4 +65,4 @@ paymentRouter.post("/payment", async (req, res) => {
     }
 });
 
-export default paymentRouter;
+module.exports = paymentRouter;

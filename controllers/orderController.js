@@ -1,5 +1,5 @@
-import orderModel from '../models/orderModel.js'
-import userModel from '../models/userModel.js'
+const orderModel = require('../models/orderModel.js')
+const userModel = require('../models/userModel.js')
 
 
 // const bkash = new bka
@@ -95,5 +95,5 @@ const listOrders = async (req, res) => {
     }
 }
 
-export {placeOrder, verifyOrder, userOrders, listOrders}
+module.exports = {placeOrder, verifyOrder, userOrders, listOrders}
 

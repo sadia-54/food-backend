@@ -1,6 +1,6 @@
-import express from 'express';
-import { addFood, listFood, removeFood } from '../controllers/foodController.js';
-import multer from 'multer'; // for image storing
+const express = require('express');
+const { addFood, listFood, removeFood } = require('../controllers/foodController.js');
+const multer = require('multer'); // for image storing
 
 const foodRouter = express.Router();
 
@@ -21,4 +21,4 @@ foodRouter.post("/remove", removeFood)
 
 
 
-export default foodRouter;
+module.exports = foodRouter;

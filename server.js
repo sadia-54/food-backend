@@ -1,17 +1,17 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import {connectDB} from './config/db.js';
-import foodRouter from './routes/foodRoute.js';
-import userRouter from './routes/userRoute.js';
-import cartRouter from './routes/cartRoute.js';
-import orderRouter from './routes/OrderRoute.js';
-import paymentRouter from './routes/paymentRoute.js';
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const connectDB = require('./config/db.js');
+const foodRouter = require('./routes/foodRoute.js');
+const userRouter = require('./routes/userRoute.js');
+const cartRouter = require('./routes/cartRoute.js');
+const orderRouter = require('./routes/OrderRoute.js');
+const paymentRouter = require('./routes/paymentRoute.js');
 
 
 // app config
 const app = express();
-const port = 3000
+const port = 4000
 
 // dotenv config
 dotenv.config()
@@ -33,10 +33,6 @@ app.use("/api/payments", paymentRouter)
 
 app.get('/', (req, res) => {
     res.send("API is running")
-})
-
-app.get('/valobasha', (req, res) => {
-    res.send("API valona")
 })
 
 app.listen(port, () => {

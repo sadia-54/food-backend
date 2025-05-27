@@ -1,8 +1,8 @@
-import userModal from '../models/userModel.js';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-import validator from 'validator'; 
-import userModel from '../models/userModel.js';
+const userModal = require('../models/userModel.js');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const validator = require('validator');
+const userModel = require('../models/userModel.js');
 
 
 // login user
@@ -77,4 +77,4 @@ const registerUser = async (req, res) => {
 
 }
 
-export { loginUser, registerUser }
+module.exports = { loginUser, registerUser }

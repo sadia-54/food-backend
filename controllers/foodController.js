@@ -1,7 +1,7 @@
 // api
 
-import foodModel from "../models/foodModel.js";
-import fs from "fs";
+const foodModel = require("../models/foodModel.js");
+const fs = require("fs");
 
 // add food item
 const addFood = async (req, res) => {
@@ -64,4 +64,4 @@ const removeFood = async (req, res) => {
     }
 }
 
-export {addFood, listFood, removeFood}
+module.exports = {addFood, listFood, removeFood}
